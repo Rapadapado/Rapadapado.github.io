@@ -5,21 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
     <style>
-        .story-script-regular {
+        html {
             font-family: "Story Script", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
 
+        .flex{
+            display: flex;
+            flex-direction: row;
+        }
+
         .color_box{
-            height: 75px
+            height: 100px;
+            width: 100px;
         }
 
         #box1{
             background-color: #8693AB;
+        }
+
+        #box2{
+            background-color: #BDD4E7;
+        }
+
+        #box3{
+            background-color: #212227;
+        }
+
+        #box4{
+            background-color: #637074;
+        }
+
+        #box5{
+            background-color: #AAB9CF;
         }
 
         p{
@@ -27,38 +49,64 @@
         }
 
         .small_text{
-            font-size: 12px;
+            font-size: 16px;
         }
 
         h3{
-            font-size: 20px;
-        }
-
-        h2{
             font-size: 24px;
         }
 
+        h2{
+            font-size: 32px;
+        }
+
         h1{
-            font-size: 28px;
+            font-size: 40px;
+        }
+
+        .button1{
+            background-color: #8693AB;
+            border: 12px solid #212227;
+            color: black;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .custom-button:hover{
+            background-color: #212227;
+        }
+
+        .custom-button:active{
+            background-color: #BDD4E7;
+        }
+
+        a{
+            text-decoration: none;
+            color:#212227
         }
 
         a:hover{
             text-decoration: underline;
-            color: #212227;
+            color: #8693AB;
         }
 
         a:visited{
-            color: #212227;
+            color: #BDD4E7;
         }
 
     </style>
 </head>
 <body>
-    <div class="color_box" id="box1"></div>
-    <div class="color_box" id="box2"></div>
-    <div class="color_box" id="box3"></div>
-    <div class="color_box" id="box4"></div>
-    <div class="color_box" id="box5"></div>
+    <div class="flex">
+        <div class="color_box" id="box1">1</div>
+        <div class="color_box" id="box2">2</div>
+        <div class="color_box" id="box3">3</div>
+        <div class="color_box" id="box4">4</div>
+        <div class="color_box" id="box5">5</div>
+    </div>
 
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -67,6 +115,11 @@
     <p>Paragraoh</p>
     <p class="small_text">Hi</p>
 
-    <p><a href="#"></a></p>
+    <p>
+        <a href="#">Click This Link</a>
+    </p>
+
+    <button class="custom-button" id="button1">Button</button>
+
 </body>
 </html>
