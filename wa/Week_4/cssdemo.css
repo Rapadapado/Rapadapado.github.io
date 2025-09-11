@@ -1,5 +1,10 @@
+        html {
+            font-family: "Story Script", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-        .flex{
+       .flex{
             display: flex;
             flex-direction: row;
         }
@@ -32,6 +37,8 @@
         /*Bad vision, so need it to be bigger*/
         p{
             font-size: 16px;
+            background-color: #514f59;
+            color: #e5d4ed;
         }
 
         .small_text{
@@ -40,6 +47,7 @@
 
         h3{
             font-size: 24px;
+            color: aquamarine;
         }
 
         h2{
@@ -48,8 +56,10 @@
 
         h1{
             font-size: 40px;
-            color: #BDD4E7;
-            margin-bottom: 20px
+            background-color: #1d1128; 
+            color: #e5d4ed;
+            width: 400px; 
+            text-align: center;
         }
 
         /*Find and make the Button option*/
@@ -75,20 +85,25 @@
         /*Make a Link Option as well*/
         a{
             text-decoration: none;
-            color:#212227
+            color:#5941a9
         }
 
         a:hover{
             text-decoration: underline;
-            color: #8693AB;
+            color: #e5d4ed;
         }
 
         a:visited{
-            color: #BDD4E7;
+            color: #1d1128;
         }
 
-        h1{
-            font-size: large;
-            color: #BDD4E7;
-            margin-bottom: 20px
+        q{
+            background-color: #1d1128; 
+            color: #e5d4ed;
+            width: 400px;
+            text-align: center;
+        }
+
+        body{
+            background-color: black;
         }
