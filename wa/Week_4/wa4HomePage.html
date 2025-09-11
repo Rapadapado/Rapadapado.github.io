@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" bref="cssdemo.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
     <style>
+        
         html {
             font-family: "Story Script", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
 
-        .flex{
+        /*.flex{
             display: flex;
             flex-direction: row;
         }
@@ -45,7 +47,7 @@
         }
 
         /*Bad vision, so need it to be bigger*/
-        p{
+        /*p{
             font-size: 16px;
         }
 
@@ -63,12 +65,12 @@
 
         h1{
             font-size: 40px;
-        }
+        }*/
 
         /*Find and make the Button option*/
-        .button1{
+        /*.button1{
             background-color: #8693AB; /*I don't know how to get the color and border to work*/
-            border: 12px solid #212227;
+          /*  border: 12px solid #212227;
             color: black;
             padding: 16px 24px;
             text-align: center;
@@ -83,10 +85,10 @@
 
         .custom-button:active{
             background-color: #BDD4E7;
-        }
+        }*/
 
         /*Make a Link Option as well*/
-        a{
+        /*a{
             text-decoration: none;
             color:#212227
         }
@@ -98,31 +100,41 @@
 
         a:visited{
             color: #BDD4E7;
-        }
+        }*/
 
     </style>
 </head>
 <body>
-    <div class="flex">
-        <div class="color_box" id="box1">1</div>
-        <div class="color_box" id="box2">2</div>
-        <div class="color_box" id="box3">3</div>
-        <div class="color_box" id="box4">4</div>
-        <div class="color_box" id="box5">5</div>
-    </div>
-
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-
-    <p>Paragraoh</p>
-    <p class="small_text">Hi</p>
-
-    <p>
-        <a href="#">Click This Link</a>
-    </p>
-
-    <button class="custom-button" id="button1">Button</button>
-
+    <main>
+        <article>
+            <header>
+                <h1>Robert Austin Faltz</h1>
+            </header>
+            <section>
+                <img src="Robert_Headshot.jpg" alt="Headshot of Robert" width="400">
+            </section>
+            <section>
+                <h3>
+                    <q>
+                        Don't Worry Be Happy!
+                    </q>
+                </h3>
+                <p>
+                    Welcome to one stop page to get to know me. I started my interest in design when I was able to help out in the 2018 
+                    Winter Olypmics in Pyeongchang. It was so cool to create something that would be seen all around the world, and
+                    still riding that moment. I am a big fan of Video Games, and spent a few years as well trying to get my foot into
+                    eports. I was close, almost got into the 2K NBA League, but was not able to get into the draft section. When I went
+                    back to school I went for Video Game Development, and love Designing and Development of the whole process. Right now,
+                    on my way on earning a bachelor's of science in Creative Technology and Design, hopfully be able to add onto the skills.
+                </p>
+            </section>
+        </article>
+    </main>
+    <nav role="navigation">
+        <a href="wa3HomePage.html">Home</a>
+        <a href="wa3Career.html">Career Goals</a>
+        <a href="wa3Hobbies.html">Hobbies</a>
+        <a href="wa3Contact.html">Contact</a>
+    </nav>
 </body>
 </html>
