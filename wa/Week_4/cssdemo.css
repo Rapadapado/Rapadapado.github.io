@@ -47,19 +47,21 @@
 
         h3{
             font-size: 24px;
-            color: aquamarine;
+            color: #e5d4ed;
+            text-align: center;
         }
 
         h2{
             font-size: 32px;
+            color: #e5d4ed;
+            text-align: center;
         }
 
         h1{
-            font-size: 40px;
-            background-color: #1d1128; 
+            font-size: 40px; 
             color: #e5d4ed;
             width: 400px; 
-            text-align: center;
+            margin: auto;
         }
 
         /*Find and make the Button option*/
@@ -94,16 +96,36 @@
         }
 
         a:visited{
-            color: #1d1128;
+            color: #6d72c3;
         }
 
-        q{
-            background-color: #1d1128; 
+        q{ 
             color: #e5d4ed;
-            width: 400px;
             text-align: center;
         }
 
         body{
-            background-color: black;
+            background-color: #1d1128;
         }
+
+        li{
+            color: #e5d4ed;
+        }
+
+        section{
+            background-color: #514f59;
+            width: 500px;
+            display: block; 
+            margin: auto;
+        }
+
+        nav{
+            text-align: center;
+        }
+
+        div{
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        
