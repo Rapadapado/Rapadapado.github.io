@@ -128,4 +128,8 @@
             display: block;
             margin: auto;
         }
+
+        img{
+            width: 400px;
+        }
         
