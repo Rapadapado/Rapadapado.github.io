@@ -61,19 +61,38 @@
         const details = document.querySelector('.card-content');
 
         expandBtn.addEventListener('click', showInfo);
+        expandBtn.addEventListener('keydown', enterButton);
 
         function showInfo() {
+           
             console.log("Hi!");
             alert("short is an alert");
+
+           
             if (info == false){
                 details.style.display = 'flex';
                 info = true;
-                details.textContent.display = '-';
             }
             else{
                 details.style.display = 'none';
                 info = false;
             }
+
+            if (expandBtn.textContent === '+'){
+                expandBtn.textContent = '-';
+            }
+            else{
+                expandBtn.textContent = '+';
+            }
+        }
+
+        function enterButton(){
+
+            if (enterButton.key === 'Enter'){
+                enterButton.preventDefault();
+                expandBtn.showInfo();
+            }
+
         }
 
         // Your code here
