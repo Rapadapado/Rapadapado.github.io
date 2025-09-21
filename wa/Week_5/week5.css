@@ -14,6 +14,22 @@
         display: none;
     }
 
+    li{
+        color: bisque;
+    }
+
+    li:hover{
+        color: black;
+    }
+
+    a{
+        color: bisque;
+    }
+
+    a:hover{
+        color: black;
+    }
+
 
     @media screen and (max-width:768px){
         
