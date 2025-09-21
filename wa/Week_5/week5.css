@@ -14,19 +14,11 @@
         display: none;
     }
 
-    li{
+    ul li a{
         color: bisque;
     }
 
-    li:hover{
-        color: black;
-    }
-
-    a{
-        color: bisque;
-    }
-
-    a:hover{
+    ul li a:hover{
         color: black;
     }
 
@@ -54,18 +46,12 @@
         }
 
         .nav-menu.show{
-            position: absolute;
-            top: 90px;
-            right: 0px;
-            height:auto;
-            width:auto;
-
+            display: flex;
             justify-content: space-between;
             align-content: center;
+            align-self: center;
             flex-direction: column;
-
-
-            display: flex;
-            gap: 2em;
+            height: fit-content;
+            width: fit-content;
         }
     }
