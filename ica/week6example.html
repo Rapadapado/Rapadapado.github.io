@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .parent-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            width: 315px;
+            grid-template-areas: 
+                "overall-nav1 course-nav1 main1"
+                "overall-nav2 course-nav2 main2"
+            ;
+        }
+
+        .box{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+        }
+
+        #one{
+            background-color: aliceblue;
+            grid-area: main2;
+        }
+
+        #two{
+            background-color: antiquewhite;
+            grid-area: main1;
+        }
+
+        #three{
+            background-color: aqua;
+            grid-area: overall-nav1;
+        }
+
+        #four{
+            background-color: aquamarine;
+            grid-area: overall-nav2;
+        }
+
+        #five{
+            background-color: azure;
+            grid-area: course-nav1;
+        }
+
+        #six{
+            background-color: beige;
+            grid-area: course-nav2;
+            /*grid-column: 2/3;
+            grid-row: 1/2;*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="parent-grid">
+        <div class="box" id="one"></div>
+        <div class="box" id="two"></div>
+        <div class="box" id="three"></div>
+        <div class="box" id="four"></div>
+        <div class="box" id="five"></div>
+        <div class="box" id="six"></div>
+    </div>
+    
+</body>
+</html>
+
+//2 row with 3 columns grid
