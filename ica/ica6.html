@@ -16,15 +16,46 @@
             <button>Architecture</button>
         </nav>
         <main class="gallery-grid">
-            <div class="photo-card">Photo 1</div>
-            <div class="photo-card">Photo 2</div>
-            <div class="photo-card">Photo 3</div>
-            <div class="photo-card featured">Featured Photo</div>
-            <div class="photo-card">Photo 5</div>
-            <div class="photo-card">Photo 6</div>
+            <div class="photo-card" data-category="nature">Photo 1</div>
+            <div class="photo-card" data-category="architecture">Photo 2</div>
+            <div class="photo-card" data-category="mammial">Photo 3</div>
+            <div class="photo-card featured" data-category="bird">Featured Photo</div>
+            <div class="photo-card" data-category="flowers" >Photo 5</div>
+            <div class="photo-card" data-category="skys">Photo 6</div>
         </main>
         <aside class="gallery-sidebar">Filter Options</aside>
     </div>
     
+<script>
+    let box1 = document.querySelector('#one').addEventListener('click',message);
+
+    // Get all filter buttons and photo cards
+    const filterButtons = document.querySelectorAll('.gallery-nav button');
+    const photoCards = document.querySelectorAll('.photo-card');
+
+    // Add click event to each button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const filterValue = event.target.textContent.toLowerCase();
+            filterPhotos(filterValue);
+        });
+    });
+
+    function message(){
+        alert("This is a message");
+    }
+
+    function filterPhotos(category) {
+        photoCards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = 'block';
+            }
+            else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+</script>
 </body>
 </html>
