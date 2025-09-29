@@ -24,10 +24,44 @@
         ;
     }
 
-    .placeHomeGrid{
+    .petitionGrid{
+        display: grid;
+        grid-template-areas: 
+        "Header"
+        "Main"
+        "Button"
+        ;
+    }
+
+    .contactGrid{
+        display: grid;
+        grid-template-areas: 
+        "Header"
+        "photo"
+        "NameHeader"
+        "Main"
+        "Button"
+        ;
+    }
+
+    .placePetitionGrid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 5rem;
+    }
+
+    .placePetitionGrid{
         display: grid;
         grid-template-columns: repeat(auto-fit, 5fr);
         grid-template-rows: repeat(auto-fit, 5fr);
+        gap: 3rem;
+    }
+
+    .placeHomeGrid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 3fr);
+        grid-template-rows: repeat(auto-fit, 3fr);
         gap: 1rem;
     }
 
@@ -54,7 +88,15 @@
         gap: 50px;
        
     }
+    
     .photo { 
+        flex: 1 1 300px; 
+        height: 200px;
+        column-gap: 100px;
+        gap: 50px;
+    }
+
+    .photo1 { 
         flex: 1 1 300px; 
         height: 200px;
         column-gap: 100px;
