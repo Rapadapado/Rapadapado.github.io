@@ -2,7 +2,7 @@
     .main-nav{
         display: flex;
         justify-content: space-between;
-        background-color: blueviolet;
+        background-color: #0b5351;
     }
 
     .nav-brand{
@@ -14,10 +14,20 @@
         display: none;
     }
 
+    .filter_button.show{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-self: center;
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+    }
+
     .homepageGrid{
         display: grid;
         grid-template-areas: 
-        "header1    nav"
+        "Title    nav"
         "header2"
         "photo1     photo"
         "main"
@@ -27,6 +37,7 @@
     .petitionGrid{
         display: grid;
         grid-template-areas: 
+        "nav"
         "Header"
         "Main"
         "Button"
@@ -36,6 +47,7 @@
     .contactGrid{
         display: grid;
         grid-template-areas: 
+        "nav"
         "Header"
         "photo"
         "NameHeader"
@@ -103,12 +115,22 @@
         gap: 50px;
     }
 
-    ul li a{
-        color: bisque;
+    ul{
+        padding: 10;
+        margin: 10;
+        list-style-type: square;
     }
 
-    ul li a:hover{
-        color: black;
+    li{
+        display: inline;
+    }
+
+    a{
+        color: #4e8098;
+    }
+
+    a:hover{
+        color: #90c2e7;
     }
 
     .theme_light{
@@ -129,6 +151,58 @@
 
     .filter_button:hover{
         background-color: blue;
+    }
+    
+    .signup{
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        background-color: #0b5351;      
+    }
+
+    form{
+        width: 300px;
+        margin-left: 40px;
+    }
+
+    form label{
+        display: flex;
+        margin-top: 30px;
+        color: #90C2E7;
+    }
+
+    form input{
+        width: 300px;
+        padding: 5px;
+        border: none;
+        border-radius: 10px;
+        border-color: black;
+        border: solid black;
+    }
+
+    input[type="button"]{
+        width: 150px;
+        height: 50px;
+        margin-top: 20px;
+        border: none;
+        margin-left: 90px;
+        background-color: #4e8098;
+    }
+
+    body{
+        background-color: #092327;
+    }
+
+    h1{
+        color: #4e8098;
+    }
+
+    h2{
+        color: #4e8098;
+    }
+
+    p{
+        color: #00a9a5
     }
 
 
@@ -164,6 +238,16 @@
             height: fit-content;
             width: fit-content;
         }
+
+        .filter_button.show{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-self: center;
+            flex-direction: column;
+            height: fit-content;
+            width: fit-content;
+        }
     }
 
     /*Tablet*/
@@ -190,6 +274,16 @@
         }
 
         .nav-menu.show{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            align-self: center;
+            flex-direction: column;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .filter_button.show{
             display: flex;
             justify-content: space-between;
             align-content: center;
