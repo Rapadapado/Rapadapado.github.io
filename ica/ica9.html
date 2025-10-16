@@ -32,22 +32,46 @@
         }*/
 
         .signup{
-            width: 200px;
             height: 200px;
+            width: 200px;
             margin: auto;
             background-color: purple;
         }
 
         label{
             color: white;
+            margin-left: 10px;
         }
 
         input{
             background-color: black;
             color: white;
+            margin-left: 10px;
+            margin-top: 5px;
+            outline: none;
         }
 
-        @keyframes moving-box{
+        input[type="button"]{
+            margin-top: 30px;
+            margin-left: 70px;
+        }
+        
+        input:hover[type="button"]{
+            color: black;
+            background-color: white;
+        }
+
+        input:invalid{
+            border: 2px solid red;
+        }
+
+        input:valid{
+            border: 2px solid green;
+        }
+
+        
+
+        /*@keyframes moving-box{
             from{
                 left: 0px;
                 top: 0px;
@@ -73,7 +97,7 @@
                 top: 0px;
                 background-color: red;
             }
-        }
+        }*/
 
     </style>
 </head>
@@ -88,11 +112,11 @@
 
     <form class="signup">
         <label>First Name</label>
-        <input text="text" placeholder="">
+        <input text="text" placeholder="" required>
         <label>Last Name</label>
-        <input text="text" placeholder="">
+        <input text="text" placeholder="" required>
         <label>Email</label>
-        <input text="text" placeholder="">
+        <input text="email" required>
         <input type="button" value="Submit">
     </form>
 
