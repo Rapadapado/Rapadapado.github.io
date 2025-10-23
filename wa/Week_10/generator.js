@@ -1,4 +1,4 @@
-let triviaBtn = document.querySelector("#js-new-quote").addEventListener('click', newTrivia);
+/*let triviaBtn = document.querySelector("#js-new-quote").addEventListener('click', newTrivia);
 
 let answerBtn = document.querySelector('#js-tweet').addEventListener('click', newAnswer);
 
@@ -6,8 +6,13 @@ let current = {
     question: "",
     answer: "",
 }
+*/
 
-const endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion"
+const endpoint = "https://gamebrain.co/api"
+
+
+const data = await response.json();
+console.log(data);
 
 async function newTrivia(){
     //console.log("Success");
@@ -17,8 +22,8 @@ async function newTrivia(){
         if(!response.ok){
             throw Error(response.statusText);
         }
-        const json = await response.json();
-        //console.log(json);
+        const data = await response.json();
+        console.log(data);
         displayTrivia(json["question"]);
         current.question = json["question"];
         current.answer = json["answer"];
