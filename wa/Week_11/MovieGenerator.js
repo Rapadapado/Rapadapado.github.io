@@ -1,76 +1,101 @@
-let triviaBtn = document.querySelector("#js-new-quote").addEventListener('click', newTrivia);
+document.addEventListener('DOMContentLoaded', function () {
+    fetchmovies();
+});
 
-let answerBtn = document.querySelector('#js-tweet').addEventListener('click', newAnswer);
+function fetchmovies() {
+    // omdb API key
+    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17';
 
-let current = {
-    question: "",
-    answer: "",
-}
+    // MoviesGrid element
+    const MoviesGrid = document.
+        getElementById('MoviesGrid');
 
-const apiUrl = 'http://www.omdbapi.com/?i=tt3896198&apikey=caddf17';
+    // Display loading message
+    MoviesGrid.innerHTML =
+        '<p>Loading movies...</p>';
 
-/*
-fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-*/
+    const randomSearchTerms =
+        ['action', 'comedy', 'drama', 'adventure'];
+    const randomTerm = randomSearchTerms[
+        Math.floor(Math.random() *
+            randomSearchTerms.length)];
 
-async function newTrivia(){
-    //console.log("Success");
-/*
-    fetch(apiUrl)
+    // Fetch movie data from OMDB API with 
+    // a default search term (e.g., 'popular')
+    fetch(`http://www.omdbapi.com/?apikey=
+          ${apiKey}&s=${randomTerm}`)
         .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-*/
-    
-    try{
-        const response = await fetch(apiUrl);
-        if(!response.ok){
-            throw Error(response.statusText);
-        }
-        const json = await response.json();
-        //console.log(json);
-        displayTrivia(json["Title"]);
-        current.question = json["Title"];
-        current.answer = json["Plot"];
-        console.log(current.question);
-        console.log(current.answer);
-    } 
-    catch(err){
-        console.log(err)
-        alert('Failed to get new trivia');
+        .then(data => {
+            if (data.Search && data.Search.length > 0) {
+                moviestoshow(data.Search);
+            } else {
+                MoviesGrid.innerHTML =
+                    '<p>No random movies found!</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching random movies:', error);
+            MoviesGrid.innerHTML =
+          '<p>Error fetching movies. Please try again later.</p>';
+        });
+}
+
+function searchMovies() {
+    // omdb API key
+    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17';
+    const searchInput = document.
+        getElementById('searchInput').value;
+
+    // MoviesGrid element
+    const MoviesGrid = document.
+        getElementById('MoviesGrid');
+
+    // Search result validation
+    if (searchInput.trim() !== '') {
+
+        // Display loading message
+        MoviesGrid.innerHTML = '<p>Loading movies...</p>';
+
+        // Fetch movie data from OMDB API
+        fetch(`http://www.omdbapi.com/?apikey=
+             ${apiKey}&s=${searchInput}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.Search && data.Search.length > 0) {
+                    moviestoshow(data.Search);
+                } else {
+                    MoviesGrid.innerHTML =
+             '<p>No movies found with the given name!</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                MoviesGrid.innerHTML =
+           '<p>Error fetching movies. Please try again later.</p>';
+            });
+    } else {
+        alert('Enter a movie title then search!');
     }
-
-    //const axios = require('axios').default;
-
-    /*const options = {method: 'GET', url: 'https://imdb.iamidiotareyoutoo.com/search'};
-
-    try {
-        const { data } = await axios.request(options);
-        console.log(data);
-    } 
-    catch (error) {
-        console.error(error);
-    }*/
-
-
 }
 
-function displayTrivia(question){
-    const questionText = document.querySelector('#js-quote-text');
-    const answerText = document.querySelector("#js-answer-text");
+function moviestoshow(movies) {
+    const MoviesGrid = document.
+        getElementById('MoviesGrid');
 
-    questionText.textContent = question;
-    answerText.textContent = "";
+    // Clear previous results
+    MoviesGrid.innerHTML = '';
+
+    // Display each movie in the results
+    movies.forEach(movie => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+
+        movieCard.innerHTML = `
+      <img src="${movie.Poster}" alt="${movie.Title}">
+      <h2>${movie.Title}</h2>
+      <p>${movie.Year}</p>
+    `;
+
+        MoviesGrid.appendChild(movieCard);
+    });
 }
-
-function newAnswer(){
-    //console.log("Success == answer!")
-
-    const answerText = document.querySelector("#js-answer-text");
-    answerText.textContent = current.answer;
-}
-
-newTrivia();

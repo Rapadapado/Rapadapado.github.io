@@ -8,22 +8,10 @@
     <link rel="stylesheet" href="MovieStyle.css">
 </head>
 <body>
-    <div class="app">
-        <header>Random Movie Quotes Trivia</header>
-        <section class="quotes">
-          <div class="quote-text" id="js-quote-text"></div>
-          <div class="quote-text" id="js-answer-text"></div>
-        </section>
-        <section class="controls" >
-          <button type="button" id="js-new-quote" class="new-quote button">
-            Create a New Movie Quote
-          </button>
-          <button type="button" id="js-tweet" class="twitter button">
-            The author is??
-          </button>
-          <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
-        </section>
-      </div>
+    <header>Search Movie</header>
+
+    <input type="text" id="search_input" placeholder="Search for a Movie!!">
+    <button onclick="searchMovies()">Search</button>
       <script type = "module" src="MovieGenerator.js"></script>
 </body>
 </html>
