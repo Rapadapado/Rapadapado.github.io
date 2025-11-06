@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="MovieStyle.css">
 </head>
 <body>
-    <header>Search Movie</header>
+    <header>
+        <h1>Search Movie</h1>
+    </header>
 
     <input type="text" id="search_input" placeholder="Search for a Movie!!">
-    <button onclick="searchMovies()">Search</button>
-      <script type = "module" src="MovieGenerator.js"></script>
+    <button onclick="searchMovies">Search</button>
+    
+    <div id="MoviesGrid">
+
+    </div>
+    
+    <script type = "module" src="MovieGenerator.js"></script>
 </body>
 </html>
