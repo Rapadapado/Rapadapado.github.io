@@ -1,10 +1,10 @@
-/*document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     fetchmovies();
-});*/
+});
 
 function fetchmovies() {
     // omdb API key
-    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17&s=tt3896198';
+    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17';
 
     // MoviesGrid element
     const MoviesGrid = document.
@@ -42,7 +42,7 @@ function fetchmovies() {
 
 function searchMovies() {
     // omdb API key
-    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17&s=tt3896198';
+    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17';
     const searchInput = document.
         getElementById('searchInput').value;
 
