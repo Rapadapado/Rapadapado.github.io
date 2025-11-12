@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function fetchmovies() {
     // omdb API key
-    const apiKey = 'http://www.omdbapi.com/?apikey=caddf17';
+    const apiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=caddf17';
 
     // MoviesGrid element
     const MoviesGrid = document.
