@@ -16,8 +16,8 @@ fetch(video + new URLSearchParams({
 }))
 .then(res => res.json())
 .then(data => {
+    console.log(data);
     data.items.forEach(item =>{
-        console.log(data)
         getChannelIcon(item);
     })
 })
