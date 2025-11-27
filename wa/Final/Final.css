@@ -11,7 +11,7 @@ html {
   font-style: normal;
 }
 
-.container {
+.bird-container {
   z-index: 1;
   position: relative;
   overflow: hidden;
@@ -187,6 +187,24 @@ html {
   z-index: 999;
 }
 
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+header h1 {
+  position: absolute;
+  /*bottom: -56px;*/
+  left: -4px;
+  color: black;
+  font-size: 48px;
+  font-weight: 100;
+  text-transform: uppercase;
+  z-index: 9;
+}
 
 header .mountains {
   position: absolute;
@@ -233,4 +251,65 @@ header .mountains .five {
 
 section {
   padding: 50px 0;
+}
+
+.mountain-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.menu-btn {
+  background-color: #040008;
+  color: white;
+  padding: 16px;
+  font-weight: bolder;
+  font-family: "Limelight", sans-serif;
+  border: none;
+}
+         
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  bottom: -100px;
+}
+         
+.menu-content {
+  display: none;
+  position: absolute;
+  background-color: #3ff360;
+  min-width: 110px;
+  z-index: 1;
+}
+         
+.links,
+.links-hidden {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 12px;
+}
+        
+.links-hidden {
+  display: block;
+}
+
+.links {
+  display: inline-block;
+}
+         
+.links-hidden:hover,
+.links:hover {
+  transform: scale(1.2);
+}
+         
+.dropdown-menu:hover .menu-content {
+  display: block;
 }
