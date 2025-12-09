@@ -18,3 +18,22 @@ menuIcon.onclick = () => {
 };
 
 menuIcon.classList.remove('active')
+
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('nav');
+
+window.onscroll = () =>{
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let diff = sec.offsetTop - 100;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= diff && top < (diff + height)){
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector(nav)
+            })
+        }
+    })
+}
