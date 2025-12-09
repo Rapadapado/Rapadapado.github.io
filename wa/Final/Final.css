@@ -6,7 +6,7 @@ html {
 }
 
 body{
-  background-color: #42273b;
+  background-color: #160f29;
 }
 
 section{
@@ -15,7 +15,7 @@ section{
 }
 
 span{
-  color: purple;
+  color: #160f29;
 }
 
 .header{
@@ -31,24 +31,25 @@ span{
 
 .h1_say{
   font-size: 42px;
+  color: #f3dfc1;
 }
 
 .navBar a{
   text-decoration: none;
   font-size: 20px;
-  color: #82ddf0;
+  color: #f3dfc1;
   margin-right: 15px;
   transition: .3s;
 }
 
 .navBar a:hover{
-  color: red;
+  color: #246a73;
   text-decoration: underline;
 }
 
 .navBar a.active{
   text-decoration: underline;
-  color: red;
+  color: #246a73;
 }
 
 .Home{
@@ -58,28 +59,38 @@ span{
   gap: 10rem;
 }
 
-.Home_Content{
+.home_content{
   display: flex;
   flex-direction: column;
   justify-content: left;
+  background-color: #246a73;
+  border: 10px solid #368f8b;
 }
 
-.Home_content h3{
+.home_content h3{
   font-size: 24px;
   font-weight: 700;
+  color: #f3dfc1;
+  margin-left: 10px;
 }
 
-.Home_Content h1{
+.home_content h1{
   font-size: 42px;
+  color: #f3dfc1;
+  margin-left: 10px;
 }
 
 .Home_image img{
   width: 35vw;
   position: relative;
-  border-style: square;
-  border-radius: 100%;
+  border: 10px solid #368f8b;
   display: flex;
   justify-content: right;
+}
+
+.home_content p{
+  color: #f3dfc1;
+  margin-left: 10px;
 }
 
 .About{
@@ -87,21 +98,57 @@ span{
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  background-color: green;
+}
+
+.About_Content{
+  background-color: #246a73;
+  border: 10px solid #368f8b;
 }
 
 .h1_About{
   font-size: 42px;
   align-items: center;
+  color: #f3dfc1;
+  margin-left: 10px;
+}
+
+.About h2{
+  color: #f3dfc1;
+  margin-left: 10px;
+}
+
+.About p{
+  color: #f3dfc1;
+  margin-left: 10px;
 }
 
 .About_img img{
   width: 35rem;
   border-style: groove;
+  border: 10px solid #368f8b;
+}
+
+.Contact_Image img{
+  width: 35rem;
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: 350px;
+  border: 10px solid #368f8b;
 }
 
 .Projects{
-  background-color: blueviolet;
+  background-color: #160f29;
+}
+.Project_heading{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #368f8b;
+  border: 10px solid#246a73;
+  color: #f3dfc1;
 }
 
 .Project_content{
@@ -116,6 +163,7 @@ span{
   border-radius: 25%;
   overflow: hidden;
   display: flex;
+  box-shadow: 0 20px 20px #368f8b;
 }
 
 .Project_Pictures img{
@@ -131,7 +179,7 @@ span{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 255, 0, 99));
+  background: linear-gradient(rgba(22, 15, 41, .1), rgba(54, 143, 139, 99));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,6 +191,85 @@ span{
 
 .Project_Pictures:hover .Project_Description{
   transform: translateY(0);
-
 }
 
+.Popup_Image{
+  position: flex;
+  left: 0;
+  background: rgba(54, 143, 139, .9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.Popup_Image span{
+  position: absolute;
+  font-size: 40px;
+  top: 0;
+  right: 25px;
+  cursor: pointer;
+  color: #ddbea8;
+  z-index: 100;
+}
+
+.Popup_Image img{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid #368f8b;
+  width: 750px;
+  object-fit: cover;
+}
+
+
+
+.Social_Icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Social_Icons ul{
+  position: absolute;
+  display: flex;
+  list-style: none;
+  margin: 0 15px;
+}
+
+.Social_Icons li{
+  list-style: none;
+  margin: 0 15px;
+}
+
+.Social_Icons ul li .fa-brands{
+  font-size: 30px;
+  line-height: 50px;
+  color: #160f29;
+  transition: 1s;
+}
+
+.Social_Icons a{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  background-color: #246a73;
+  box-shadow: #f3dfc1;
+  transition: 1s;
+}
+
+.Social_Icons a:hover{
+  transform: translate(0, -20%);
+  background-color: #368f8b;
+}
+
+
+@media(max-width:768px){
+  .Popup_Image img{
+    width: 95%;
+  }
+}
