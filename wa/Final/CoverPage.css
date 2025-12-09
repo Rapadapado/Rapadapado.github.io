@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 a {
+  font-family: "Limelight", cursive;
+  color: white;
+  font-size: 4rem;
+  letter-spacing: -3px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
+}
+
+nav{
+    font-family: "Limelight";
+    font: 100px;
+    display: flex;
+    align-content: center;
+}
+
+.container {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35rem;
+  /*background-color: #264653;*/
+  padding: 2rem;
+}
+
+.bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+.bird--one {
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+}
+.bird--two {
+  animation-duration: 0.9s;
+  animation-delay: -0.75s;
+}
+.bird--three {
+  animation-duration: 1.25s;
+  animation-delay: -0.25s;
+}
+.bird--four {
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+
+.bird--five {
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+.bird--six {
+  animation-duration: 2.9s;
+  animation-delay: 0.75s;
+}
+.bird--seven {
+  animation-duration: 3.25s;
+  animation-delay: 0.25s;
+}
+.bird--eight {
+  animation-duration: 3.1s;
+  animation-delay: 0.5s;
+}
+
+.bird-container {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.bird-container--one {
+  animation-duration: 15s;
+  animation-delay: 0;
+}
+.bird-container--two {
+  animation-duration: 16s;
+  animation-delay: 1s;
+}
+.bird-container--three {
+  animation-duration: 14.6s;
+  animation-delay: 9.5s;
+}
+.bird-container--four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+
+.bird-container--five {
+  animation-duration: 15s;
+  animation-delay: 2;
+}
+.bird-container--six {
+  animation-duration: 16s;
+  animation-delay: 3s;
+}
+.bird-container--seven {
+  animation-duration: 14.6s;
+  animation-delay: 11.5s;
+}
+.bird-container--eight {
+  animation-duration: 16s;
+  animation-delay: 12.25s;
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+}
+@keyframes fly-right-two {
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+.codepen {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 5px 0 0 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  z-index: 999;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-smooth: auto;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #444;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+header h1 a{
+  position: absolute;
+  bottom: -56px;
+  left: -4px;
+  color: white;
+  font-size: 48px;
+  font-weight: 100;
+  text-transform: uppercase;
+  z-index: 9;
+}
+header .mountains {
+  position: absolute;
+  display: block;
+  bottom: -5px;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+header .mountains .one,
+header .mountains .two,
+header .mountains .three,
+header .mountains .four,
+header .mountains .five {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 105%;
+}
+header .mountains .one {
+  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-1.svg");
+  z-index: 0;
+}
+header .mountains .two {
+  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-2.svg");
+  z-index: -1;
+}
+header .mountains .three {
+  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-3.svg");
+  z-index: -2;
+}
+header .mountains .four {
+  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-4.svg");
+  z-index: -3;
+}
+header .mountains .five {
+  background-image: url("https://raw.githubusercontent.com/joshuaward/codepen-images/master/mountains-5.svg");
+  z-index: -4;
+}
+
+section {
+  padding: 50px 0;
+}

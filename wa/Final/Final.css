@@ -1,4 +1,3 @@
-
 html {
   font-family: "Limelight", sans-serif;
   font-weight: 400;
@@ -134,9 +133,28 @@ span{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
   margin-left: 350px;
   border: 10px solid #368f8b;
+}
+
+.Contact h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddbea8;
+  background-color: #246a73;
+  border: 10px solid #368f8b;
+}
+
+.Contact p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddbea8;
+  background-color: #246a73;
+  border: 10px solid #368f8b;
+  font-size: 20px;
+  margin-bottom: 50px;
 }
 
 .Projects{
@@ -223,6 +241,15 @@ span{
   object-fit: cover;
 }
 
+.Resume h1{
+  color: #f3dfc1;
+  background-color: #246a73;
+  border: 10px solid #368f8b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 .Social_Icons{
@@ -267,9 +294,84 @@ span{
   background-color: #368f8b;
 }
 
+#menu{
+  color: #f3dfc1;
+  display: none;
+  font-size: 40px;
+}
+
 
 @media(max-width:768px){
+  
   .Popup_Image img{
     width: 95%;
   }
+
+  #menu{
+    display: block;
+  }
+
+  .navBar{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+    background-color: #160f29;
+  }
+
+  .navBar.active{
+    display: block;
+  }
+
+  .navBar a{
+    display: block;
+    margin: 3rem;
+  }
+
+  .Home{
+    flex-direction: column;
+  }
+
+  .Home_image img{
+    width: 60vw;
+    margin-top: 10px;
+  }
+
+  .home_content{
+    margin-top: 5rem;
+  }
+
+  .About{
+    flex-direction: column;
+  }
+
+  .About_Content{
+    margin-top: 5rem;
+  }
+
+  .About_img img{
+    width: 60vw;
+    margin-top: 10px;
+  }
+
+  .Contact{
+    flex-direction: column;
+  }
+
+  .Contact h1, p{
+    margin-top: 2rem;
+  }
+
+  .Contact_Image{
+    width: 60vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Project_content{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
